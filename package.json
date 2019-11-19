@@ -1,0 +1,47 @@
+{
+  "name": "blogpage.io",
+  "version": "0.0.1",
+  "description": "blogpage.io open-source blog rendering engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniFoldi/blogpage.io.git"
+  },
+  "keywords": [
+    "blog",
+    "blogpage",
+    "blogpage.io",
+    "markdown",
+    "website"
+  ],
+  "author": "DaniFoldi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/DaniFoldi/blogpage.io/issues"
+  },
+  "homepage": "https://github.com/DaniFoldi/blogpage.io#readme",
+  "dependencies": {
+    "analytics": "^0.3.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "hash-files": "^1.1.1",
+    "innertext": "^1.0.3",
+    "json5": "^2.1.1",
+    "markdown-it": "^10.0.0",
+    "markdown-it-color": "^1.0.5",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-kbd": "^2.0.0",
+    "markdown-it-prism": "^2.0.3",
+    "markdown-it-spoiler": "^1.1.0",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "mostachito": "^1.0.2",
+    "node-fetch": "^2.6.0",
+    "socket.io": "^2.3.0",
+    "twemoji": "^12.1.4"
+  }
+}
