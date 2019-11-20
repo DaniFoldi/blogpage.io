@@ -43,5 +43,8 @@
     "node-fetch": "^2.6.0",
     "socket.io": "^2.3.0",
     "twemoji": "^12.1.4"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.3"
   }
 }
