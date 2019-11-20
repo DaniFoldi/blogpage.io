@@ -45,6 +45,7 @@
     "twemoji": "^12.1.4"
   },
   "devDependencies": {
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "node-sass": "^4.13.0"
   }
 }
