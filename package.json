@@ -38,12 +38,14 @@
     "markdown-it-color": "^1.0.5",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-kbd": "^2.0.0",
+    "markdown-it-mark": "^3.0.0",
     "markdown-it-prism": "^2.0.3",
     "markdown-it-spoiler": "^1.1.0",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "node-fetch": "^2.6.0",
     "socket.io": "^2.3.0",
+    "tiempo": "^1.1.5",
     "twemoji": "^12.1.4"
   },
   "devDependencies": {
