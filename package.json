@@ -64,7 +64,7 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-task-lists": "^2.1.1",
     "markdown-it-underline": "^1.0.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "packagejson": "^1.0.1",
     "pluralize": "^8.0.0",
     "posterize": "^1.0.2",
