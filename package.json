@@ -68,7 +68,7 @@
     "packagejson": "^1.0.1",
     "pluralize": "^8.0.0",
     "posterize": "^1.0.2",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "save-pixels": "^2.3.4",
     "socket.io": "^2.3.0",
     "twemoji": "^12.1.6"
