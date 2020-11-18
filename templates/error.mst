@@ -1,0 +1,9 @@
+<div class="error">
+  <h1>Oh no!</h1>
+  <h2>An error has occured while loading this page.</h2>
+  <img src="https://http.cat/{{error_code}}.jpg">
+  <p>Cat image provided by <a href="https://http.cat">http.cat</a></p>
+  <p>
+    You can try going back or <a href="{{settings.main}}">click here</a> to go to the main page
+  </p>
+</div>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,900,900italic&subset=cyrillic,cyrillic-ext,greek,latin,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="shortcut icon" href="{{settings.favicon}}">
+  <title>{{settings.page_title}}</title>
+</head>
+
+<body>
+  {{>header}}
+  <p id="filter_results">{{filter_results}}</p>
+  {{>list}}
+  {{>footer}}
+</body>
+
+<script src="/scripts/main.js" async></script>
+</html>

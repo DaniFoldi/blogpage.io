@@ -1,0 +1,7 @@
+{
+  "title": "Easter egg article",
+  "subtitle": "Hidden from the feed",
+  "authors": [],
+  tags: ['blogpage.io', 'demo'],
+  show_in_feed: false
+}

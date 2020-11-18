@@ -1,0 +1,20 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+      sandbox="allow-popups allow-storage-access-by-user-activation allow-same-origin allow-scripts"></iframe>
+    <script>
+      document.querySelector('iframe').src = location.hash.substr(1).replace('https://music.apple.com', 'https://embed.music.apple.com')
+
+    </script>
+  </body>
+
+  </html>

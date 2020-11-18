@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <blockquote class="twitter-tweet">
+    Loading tweet...
+    <a id="twitter-link"></a>
+  </blockquote>
+  <script>
+    document.querySelector('#twitter-link').href = location.hash.substr(1)
+
+  </script>
+  <script src="https://platform.twitter.com/widgets.js"></script>
+  <script src="/iframe-resizer/iframeResizer.contentWindow.min.js"></script>
+</body>
+
+</html>

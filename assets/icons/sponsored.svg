@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 200 200" width="200pt" height="200pt">
+  <path d=" M 167.686 123.3 C 167.686 135.828 137.357 146 100 146 C 62.643 146 32.314 135.828 32.314 123.3" fill="none" stroke-width="10" stroke="rgb(50,50,50)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="5"/>
+  <ellipse cx="100" cy="99.3000507929747" rx="67.68619435515299" ry="28.680590828454655" fill="none" stroke-width="10" stroke="rgb(50,50,50)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="5"/>
+  <text transform="matrix(0.742,0,0,1.129,90.171,119.438)" style="font-family:'Open Sans';font-weight:700;font-size:50px;font-style:normal;fill:#323232;stroke:none;">$</text>
+  <line x1="167.686" y1="123.3" x2="167.686" y2="99"  stroke-width="10" stroke="rgb(50,50,50)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="5"/>
+  <line x1="32.314" y1="123.3" x2="32.314" y2="99" stroke-width="10" stroke="rgb(50,50,50)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="5"/>
+</svg>

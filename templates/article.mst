@@ -1,0 +1,37 @@
+<main>
+    <div id="content">
+    <h1>{{title}}</h1>
+    <h2>{{subtitle}}</h2>
+    <div id="authors">
+      {{#authors}}
+      <a href="/authors/{{name}}">
+        <div>
+          <img src="{{photo}}">
+          <p>{{name}}</p>
+        </div>
+      </a>
+      {{/authors}}
+    </div>
+    {{follow.author}}
+    <p>{{date}}</p>
+    <p>{{update}}</p>
+    <p>{{locale.read_time}}{{readtime}}{{locale.min}}</p>
+    <span>{{extras}}</span>
+    {{share}}
+    {{save}}
+    <article>{{{content}}}</article>
+    <ul id="tags">
+      {{#tags_displayed}}
+      <a href="/tags/{{name}}"><li {{#popular}}class="popular"{{/popular}}>{{name}}</li></a>
+      {{/tags_displayed}}
+    </ul>
+    <p>{{reactions}}</p>
+    {{follow.author}}
+    {{follow.entry}}
+    {{follow.subcategory}}
+    {{follow.category}}
+    {{follow.blog}}
+    {{comments}}
+    {{more-articles}}
+  </div>
+</main>

@@ -1,0 +1,16 @@
+{
+  related_blogs: "Related blogs",
+  min_read: " min read",
+  read_time: "Read time: ",
+  min: "min",
+  updated: "Updated",
+  written_by: "written by",
+  showing: "Showing",
+  article: "article",
+  no: "No",
+  results: "results",
+  found: "found",
+  tagged: "tagged",
+  in_category: "in category",
+  matching_search: "matching search"
+}

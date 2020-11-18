@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,900,900italic&subset=cyrillic,cyrillic-ext,greek,latin,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/prism/themes/prism.css">
+  <!--<link rel="stylesheet" href="/styles/prism-ghcolors.css">-->
+  <link rel="shortcut icon" href="{{settings.favicon}}">
+  <title>{{article_title}}{{settings.article_title}}</title>
+</head>
+
+<body>
+  {{>header}}
+  {{>displayed}}
+  {{>footer}}
+</body>
+
+<script src="/prism/components/prism-core.min.js"></script>
+<script src="/prism/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="/iframe-resizer/iframeResizer.min.js"></script>
+<script src="/scripts/main.js"></script>
+</html>

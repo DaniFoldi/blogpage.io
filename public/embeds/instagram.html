@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    iframe {
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <blockquote id="instagram-post" class="instagram-media" data-instgrm-captioned>
+    Loading post...
+  </blockquote>
+  <script>
+    document.querySelector('#instagram-post').setAttribute("data-instgrm-permalink", `https://www.instagram.com/p/${location.hash.substr(1)}`)
+
+  </script>
+  <script src="https://instagram.com/embed.js"></script>
+  <script src="/iframe-resizer/iframeResizer.contentWindow.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+{
+  page_title: 'DaniFoldi.com',
+  blog_name: 'DaniFoldi.com',
+  article_title: ' @ DaniFoldi.com',
+  main_url: 'https://localhost:8000',
+  port: 8000,
+  favicon: '/icons/danifoldi.com.png',
+  logo: '/icons/danifoldi.com.png',
+  showupdates: true,
+  categories: [{
+    category_name: 'test cat',
+    subcategories: [{
+      subcategory_name: 'test sub',
+      topics: [{
+          topic_name: 'test ent'
+        },
+        {
+          topic_name: 'test ent 2'
+        }
+      ]
+    }, {
+      subcategory_name: 'test sub2',
+      topics: [{
+          topic_name: 'test ent'
+        },
+        {
+          topic_name: 'test ent 2'
+        }
+      ]
+    }]
+  }],
+  header_left: [{
+      tag: 'haha'
+    },
+    {
+      spacer: 'small'
+    }
+  ],
+  header_right: [{
+    link: 1,
+    title: 'DuckDuckGo'
+  }],
+  show_related: false,
+  related_blogs: [],
+  socials: [{
+      name: 'facebook',
+      link: 'https://facebook.com',
+      icon: '/icons/facebook.svg'
+    },
+    {
+      name: 'twitter',
+      link: 'https://twitter.com',
+      icon: '/icons/twitter.svg'
+    }
+  ],
+  copyright: '© 2019-2020 Dániel Földi. All rights reserved.',
+  x_powered_by_express: false,
+  blogpage: {
+    reference: ' - a blogpage.io blog',
+    poweredby: '<a href="https://blogpage.io">Powered by blogpage.io</a>',
+    url: 'https://blogpage.io',
+    logo: '/icons/blogpage.io.png'
+  }
+}

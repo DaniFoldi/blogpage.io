@@ -1,0 +1,50 @@
+<header>
+  <a href="/" id="logo"><img src="{{settings.blogpage.logo}}" alt="logo"></a>
+  <p id="blog-title"><a href='/'>{{settings.page_title}}</a></p>
+  <p id="blogpage-title"><a href='{{settings.blogpage.url}}'>{{settings.blogpage.reference}}</a></p>
+  <span id="search"><input type="text" id="searchbar"><button><img src="/icons/search.svg" alt="search"></button></span>
+  <button id="account"><img src="/icons/login.svg" alt="account"></button>
+</header>
+<nav>
+  <a href="/" id="expanding-logo" class="expanding-logo"><img src="{{settings.blogpage.logo}}" alt="logo"></a>
+  <ul id="header-left">
+    {{#header_left}}
+      {{#article}}<li data-href="/articles/{{#lambdas.linkify}}{{article}}{{/lambdas.linkify}}">{{title}}{{/article}}
+      {{#spacer}}<li class="spacer spacer-{{spacer}}"></li>{{/spacer}}
+      {{#author}}<li data-href="/authors/{{author}}">@{{name}}</li>{{/author}}
+      {{#link}}<li data-href="/jump/{{link}}">{{title}}</li>{{/link}}
+      {{#tag}}<li data-href="/tags/{{tag}}">#{{tag}}</li>{{/tag}}
+      {{#category_name}}<li data-href="/categories/{{#lambdas.linkify}}{{category_name}}{{/lambdas.linkify}}">{{category_name}}<ul>
+          {{#subcategories}}
+            <li data-href="/categories/{{#lambdas.linkify}}{{category_name}}{{/lambdas.linkify}}/{{#lambdas.linkify}}{{subcategory_name}}{{/lambdas.linkify}}">{{subcategory_name}}<ul>
+                {{#topics}}
+                <li data-href="/categories/{{#lambdas.linkify}}{{category_name}}{{/lambdas.linkify}}/{{#lambdas.linkify}}{{subcategory_name}}{{/lambdas.linkify}}/{{#lambdas.linkify}}{{topic_name}}{{/lambdas.linkify}}">{{topic_name}}</li>
+                {{/topics}}
+              </ul>
+            </li>
+          {{/subcategories}}
+        </ul>
+      </li>{{/category_name}}
+    {{/header_left}}
+  </ul>
+  <ul id="header-right">
+    {{#header_right}}
+      {{#article}}<li data-href="/articles/{{#lambdas.linkify}}{{article}}{{/lambdas.linkify}}">{{title}}{{/article}}
+      {{#spacer}}<li class="spacer spacer-{{spacer}}"></li>{{/spacer}}
+      {{#author}}<li data-href="/authors/{{author}}">@{{name}}</li>{{/author}}
+      {{#link}}<li data-href="/jump/{{link}}">{{title}}</li>{{/link}}
+      {{#tag}}<li data-href="/tags/{{tag}}">#{{tag}}</li>{{/tag}}
+      {{#category_name}}<li data-href="/categories/{{#lambdas.linkify}}{{category_name}}{{/lambdas.linkify}}">{{category_name}}<ul>
+          {{#subcategories}}
+            <li data-href="/categories/{{#lambdas.linkify}}{{category_name}}{{/lambdas.linkify}}/{{#lambdas.linkify}}{{subcategory_name}}{{/lambdas.linkify}}">{{subcategory_name}}<ul>
+                {{#topics}}
+                <li data-href="/categories/{{#lambdas.linkify}}{{category_name}}{{/lambdas.linkify}}/{{#lambdas.linkify}}{{subcategory_name}}{{/lambdas.linkify}}/{{#lambdas.linkify}}{{topic_name}}{{/lambdas.linkify}}">{{topic_name}}</li>
+                {{/topics}}
+              </ul>
+            </li>
+          {{/subcategories}}
+        </ul>
+      </li>{{/category_name}}
+    {{/header_right}}
+  </ul>
+</nav>

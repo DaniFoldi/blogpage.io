@@ -1,0 +1,644 @@
+$white: #FFFFFF
+$lightgray: #B8B8B8
+$darkgray: #626262
+$black: #323232
+
+$content: 800px
+$margin: calc(50vw - 400px)
+$header-cell: 120px
+
+body
+  margin: 0
+  padding: 0
+  color: $black
+  font-family: Raleway
+  background: $white
+
+a, a:visited
+  color: $black
+  font-weight: 500
+
+header
+  top: 0
+  position: sticky
+  background: $white
+  display: grid
+  grid-template-rows: 48px
+  grid-template-columns: $margin 36px auto auto 1fr 8px 36px $margin
+  grid-template-areas: ". logo title blogpage-title search . account ."
+  align-items: center
+
+  a, a:visited
+    text-decoration: none
+    color: inherit
+
+  #logo
+    grid-area: logo
+    width: 36px
+    height: 36px
+
+    img
+      width: 100%
+      height: 100%
+
+  #blog-title
+    grid-area: title
+    padding-left: 16px
+
+  #blogpage-title
+    grid-area: blogpage-title
+    color: $darkgray
+    padding-left: 8px
+
+  #account
+    grid-area: account
+    border: none
+    height: 36px
+    padding: 0
+    margin: 0
+    cursor: not-allowed
+    background: $white
+    border: 2px solid $lightgray
+    border-radius: 4px
+
+    img
+      width: 100%
+      height: 100%
+
+  #search
+    grid-area: search
+    place-self: center end
+    height: 36px
+
+    button
+      width: 36px
+      height: 36px
+      border: none
+      padding: 0
+      cursor: pointer
+      background: $white
+      transition: background 0.4s
+      border: 2px solid $lightgray
+      border-radius: 4px
+
+      img
+        width: 100%
+        height: 100%
+
+    input
+      height: 36px
+      vertical-align: top
+      box-sizing: border-box
+      margin: 0
+      font-size: 20px
+      transition: width .3s
+      width: 0px
+      border: none
+      padding: 4px 0
+      border-radius: 4px 0 0 4px
+
+      &.open
+        width: 300px
+        padding: 4px
+        border-width: 2px 0 2px 2px
+        border-color: $lightgray
+        border-style: solid
+
+        & + button
+          border-left-width: 0
+          padding-left: 2px
+          border-top-left-radius: 0
+          border-bottom-left-radius: 0
+
+      &:focus
+        outline: none
+
+nav
+  top: 0
+  position: sticky
+  background: $white
+  color: $black
+  display: grid
+  grid-template-rows: 48px
+  grid-template-columns: $margin 0 0 auto auto $margin
+  grid-template-areas: ". expanding-logo . header-left header-right ."
+  align-items: center
+  box-shadow: 0px 5px 6px -4px $black
+  transition: grid-template-columns .3s
+  z-index: 100
+
+  &.dense
+    grid-template-columns: $margin 36px 8px auto auto $margin
+
+  #expanding-logo
+    grid-area: expanding-logo
+    height: 36px
+
+    img
+      width: 100%
+      height: auto
+
+  #header-left
+    grid-area: header-left
+
+  #header-right
+    grid-area: header-right
+    justify-self: right
+    text-align: right
+
+  ul
+    margin: 0
+    padding: 0
+    height: 48px
+    display: inline-block
+
+  & > ul > li
+    display: inline-block
+    vertical-align: top
+    position: relative
+
+  li
+    list-style: none
+    position: relative
+    height: 48px
+    background: $white
+    padding: 14px 8px
+    box-sizing: border-box
+    text-decoration: underline
+    font-weight: 500
+    text-overflow: ellipsis
+
+    & > ul
+      display: none
+      position: absolute
+      left: 0
+      top: 48px
+      min-width: $header-cell
+      // box-shadow: 0px 0px 8px 1px rgba(50, 50, 50, 0.75)
+
+      li
+        display: block
+        background: darken($white, 4)
+
+        ul
+          position: absolute
+          left: $header-cell
+          top: 0
+
+    &:hover > ul
+      display: block
+
+    &:not(.spacer)
+      cursor: pointer
+
+      &:hover
+        background: darken($white, 8)
+
+    &.spacer-small
+      width: $header-cell / 4
+
+    &.spacer-medium
+      width: $header-cell / 2
+
+    &.spacer-large
+      width: $header-cell
+
+#filter_results
+  text-align: center
+  font-size: 30px
+
+
+#list
+  display: grid
+  margin: 24px $margin 0
+  max-width: 100vw
+  grid-template-columns: repeat(auto-fit, ($content - 16px) / 2)
+  grid-template-rows: auto
+  grid-auto-flow: row dense
+  grid-gap: 16px
+
+  a
+    text-decoration: none
+    transition: background .4s
+
+    &:hover
+      background: darken(white, 5)
+
+    &.double
+      grid-row: span 3
+
+    .thumbnail
+      width: 100%
+      max-height: 250px
+      object-fit: fill
+
+    h3
+      font-size: 26px
+      margin: 0
+
+      &.important
+        text-transform: uppercase
+
+    h4
+      font-size: 22px
+      margin-top: 12px
+
+    i
+      font-weight: 300
+
+    span img
+      width: 16px
+      height: 16px
+
+main
+  display: grid
+  grid-template-columns: $margin minmax($content, 100vw) $margin
+  grid-template-areas: ". content ."
+  max-width: 100vw
+
+  #content
+    grid-area: content
+    font-size: 17px
+    line-height: 1.6
+    max-width: 100vw
+    padding: 8px
+    box-sizing: border-box
+
+    & > h1, & > h2
+      text-align: center
+
+    #authors
+      img
+        width: 48px
+        height: 48px
+        border-radius: 24px
+        object-fit: cover
+        vertical-align: middle
+
+      p
+        vertical-align: middle
+        display: inline-block
+        margin: 0
+        font-weight: 500
+
+      div
+        border: 3px solid lighten($lightgray, 10)
+        border-radius: 8px
+        display: inline-block
+        padding: 8px
+
+      a
+        display: inline-block
+
+    & > p
+      display: inline
+      font-weight: 300
+
+      & + p:not(:empty):before
+        content: '| '
+        color: $lightgray
+
+    #tags
+      padding-left: 0
+      padding-top: 24px
+
+      a
+        text-decoration: none
+
+      li
+        display: inline
+        border: 2px solid darken($darkgray, 10)
+        color: darken($darkgray, 10)
+        border-radius: 40px
+        padding: 8px
+        height: 44px
+        margin: 4px
+        cursor: pointer
+        font-weight: 500
+        font-size: 18px
+
+        &:before
+          content: '#'
+          font-size: 18px
+          font-weight: 800
+
+        .popular
+          background: $darkgray
+          font-weight: 600
+
+    article
+      img
+        margin-left: auto
+        margin-right: auto
+        display: block
+        max-width: 100%
+
+        &:not([width])
+          width: 100%
+
+      hr
+        border-color: $lightgray
+        border-radius: 2px
+
+      blockquote
+
+        &:before
+          content: '“'
+          position: relative
+          left: -40px
+          top: 30px
+          font-size: 80px
+          line-height: 16px
+          color: $darkgray
+
+        p
+          margin-top: -28px
+          font-style: italic
+          font-size: 20px
+
+      mark
+        background: darken($white, 10)
+        color: black
+        font-weight: 500
+
+      span.spoiler
+        padding: 4px
+        line-height: 1.9
+        box-sizing: border-box
+        background: lighten($lightgray, 20)
+        user-select: none
+        -webkit-user-select: none
+        color: transparent
+        border-radius: 3px
+        cursor: pointer
+
+        &.shown
+          color: $black
+          user-select: auto
+          -webkit-user-select: auto
+          cursor: auto
+
+      p.main
+        border-left: 4px solid $darkgray
+        background: $lightgray
+        padding: 8px
+        margin: 0
+
+      pre, kbd, code
+        font-family: 'Source Code Pro'
+        word-break: break-word
+        white-space: pre-wrap
+
+      pre
+        position: relative
+
+        button.copy
+          position: absolute
+          right: 17px
+          top: 17px
+          height: 18px
+          background: rgba(0, 0, 0, 0.35)
+          border: none
+          color: $white
+
+          &.focus
+            color: $white
+
+      a[href^='#fn']
+        vertical-align: super
+
+      ul
+        padding-left: 0
+
+        &> li
+          list-style: none
+
+          &:not(.task-list-item):before
+            content: '•'
+            vertical-align: middle
+            font-size: 26px
+            margin: -16px 0
+            display: inline-block
+            padding-right: 11px
+            padding-left: 20px
+
+      input[type=checkbox].task-list-item-checkbox
+        margin-left: 16px
+        margin-right: 8px
+
+      table
+        border-spacing: 0
+        border-collapse: collapse
+
+        tr:nth-child(2n)
+          background: darken($white, 5)
+
+        th
+          text-align: center
+
+        th, td
+          padding: 6px 8px
+          border: 1px solid darken($white, 10)
+          height: 31px
+
+      img.emoji
+        display: initial
+        width: 20px
+        height: 20px
+
+      div.embed
+        max-width: 100%
+
+        &.embed-youtube
+          position: relative
+          padding-bottom: 56.25%
+          height: 0
+          z-index: 0
+
+          iframe
+            width: 100%
+            position: absolute
+            height: 100%
+            top: 0
+            left: 0
+
+        &.embed-twitter
+          max-width: 560px
+          min-height: 400px
+          margin-left: auto
+          margin-right: auto
+
+        &.embed-instagram
+          max-width: 560px
+          margin-left: auto
+          margin-right: auto
+
+        &.embed-custom iframe:not([src])
+          height: 0
+
+        &.embed-custom
+          height: 600px
+          background: lighten($lightgray, 15)
+          margin-bottom: 8px
+
+        &.embed-codesandbox
+          height: 600px
+
+        iframe
+          width: 100%
+          height: 100%
+
+      div.gauge-container
+
+        .gauge-max
+          margin: -16px
+          clip-path: polygon(75% 25%, 75% 75%, 67.51% 75%, 85.01% 100%, 14.99% 100%, 32.49% 75%, 25% 75%, 25% 25%)
+          background: $white
+          width: 150px
+          height: 150px
+
+        .gauge
+          background: $white
+          width: 150px
+          height: 150px
+          margin: -16px
+
+          &.gauge-10
+            clip-path: polygon(75% 25%, 75% 75%, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-9
+            clip-path: polygon(75% 25%, 75% 58.12%, 100% 66.25%, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-8
+            clip-path: polygon(75% 25%, 75% 46.04%, 100% 42.08%, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-7
+            clip-path: polygon(75% 25%, 75% 31.84%, 100% 13.67%, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-6
+            clip-path: polygon(62.74% 25%, 75.48% 0, 100% 0, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-5
+            clip-path: polygon(50% 25%, 50% 0, 100% 0, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-4
+            clip-path: polygon(37.26% 25%, 24.52% 0, 100% 0, 100% 100%, 0 100%, 25% 75%, 25% 25%)
+
+          &.gauge-3
+            clip-path: polygon(25% 75%, 25% 31.84%, 0 13.67%, 0 0, 100% 0, 100% 100%, 0 100%)
+
+          &.gauge-2
+            clip-path: polygon(25% 75%, 25% 46.04%, 0 42.08%, 0 0, 100% 0, 100% 100%, 0 100%)
+
+          &.gauge-1
+            clip-path: polygon(25% 75%, 25% 58.12%, 0 66.25%, 0 0, 100% 0, 100% 100%, 0 100%)
+
+        .gauge-max-background
+          border-radius: 75px
+          border-width: 16px
+          border-style: solid
+          box-sizing: border-box
+          border-color: $lightgray
+          clip-path: circle(67px at 50% 50%)
+          width: 150px
+          height: 150px
+
+        .gauge-background
+          border-radius: 75px
+          border-width: 16px
+          border-style: solid
+          box-sizing: border-box
+          border-color: $darkgray
+          width: 150px
+          height: 150px
+          margin-left: auto
+          margin-right: auto
+
+        .gauge-caption
+          text-align: center
+          margin-top: 0
+
+        .gauge-rating
+          position: absolute
+          width: 150px
+          height: 150px
+          line-height: 150px
+          margin: 0
+          text-align: center
+
+          b
+            font-size: 24px
+
+      .katex-html
+        display: none
+
+      .katex-display
+        margin-left: auto
+        margin-right: auto
+        display: block
+        text-align: center
+
+.error
+  text-align: center
+
+  img
+    max-width: 60vw
+    max-height: 60vh
+
+    & + p
+      font-size: 16px
+      margin-top: 8px
+
+footer
+  display: grid
+  grid-template: '. related-blogs related-blogs .' auto '. copyright socials .' auto '. poweredby poweredby .' auto / $margin auto auto $margin
+  place-items: stretch
+  margin-top: 60px
+  padding-bottom: 24px
+
+  #related-blogs
+    grid-area: related-blogs
+
+    ul
+      list-style: none
+      padding-left: 0
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+      grid-row-gap: 16px
+
+      li
+        height: 32px
+
+      img
+        width: 32px
+        height: 32px
+
+      p
+        display: inline-block
+        margin: 0 12px
+        line-height: 32px
+        vertical-align: top
+
+  p
+    grid-area: copyright
+
+  #socials
+    list-style: none
+    grid-area: socials
+    padding-left: 0
+
+    img
+      vertical-align: middle
+      width: 32px
+      height: 32px
+
+    a, a:visited
+      vertical-align: middle
+      text-decoration: none
+      color: $black
+
+  & > a
+    grid-area: poweredby
+    font-weight: 600
+    color: $black
+    text-align: center

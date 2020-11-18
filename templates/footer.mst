@@ -1,0 +1,19 @@
+<footer>
+  {{#lambdas.show_related}}
+  <div id="related-blogs">
+    <h3>{{locale.related_blogs}}</h3>
+    <ul>
+      {{#related_blogs}}
+        <li><a href="{{link}}"><img src="{{icon}}"><p>{{name}}</p></a></li>
+      {{/related_blogs}}
+    </ul>
+  </div>
+  {{/lambdas.show_related}}
+  <p>{{{settings.copyright}}}</p>
+  <ul id="socials">
+    {{#settings.socials}}
+    <li><a href="{{link}}"><img src="{{icon}}">{{name}}</a></li>
+    {{/settings.socials}}
+  </ul>
+  {{{settings.blogpage.poweredby}}}
+</footer>

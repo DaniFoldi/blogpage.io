@@ -1,0 +1,18 @@
+<div id="list">
+  {{#articles}}
+    <a href="{{article_link}}" {{#thumbnail}}class="double"{{/thumbnail}}>
+      <div>
+        {{#thumbnail}}<img class="thumbnail" src="{{thumbnail}}">{{/thumbnail}}
+        <h3 {{#flags.important}}class="important"{{/flags.important}}>{{title}}</h3>
+        <h4 {{#flags.important}}class="important"{{/flags.important}}>{{subtitle}}</h4>
+        <i>{{readtime}}{{locale.min_read}}</i>
+        <span>
+          {{#flags.important}}<img src="/icons/important.svg">{{/flags.important}}
+          {{#flags.sponsored}}<img src="/icons/sponsored.svg">{{/flags.sponsored}}
+          {{#flags.ad}}<img src="/icons/ad.svg">{{/flags.ad}}
+          {{#flags.starred}}<img src="/icons/starred.svg">{{/flags.starred}}
+        </span>
+      </div>
+    </a>
+    {{/articles}}
+</div>
