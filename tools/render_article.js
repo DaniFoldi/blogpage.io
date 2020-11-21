@@ -58,6 +58,9 @@ md.use(mention)
 md.use(articlelink)
 md.use(gallery)
 md.use(markdownItCustomBlock, {
+  spotify(id) {
+    return `<div class='embed embed-spotify'><iframe src="https://open.spotify.com/embed/album/${id}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`
+  },
   youtube(id) {
     return `<div class='embed embed-youtube'><iframe type="text/html" referrerpolicy="no-referrer" src="https://www.youtube.com/embed/${id}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>`
   },

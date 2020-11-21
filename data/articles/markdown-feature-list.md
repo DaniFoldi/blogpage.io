@@ -213,7 +213,13 @@ $$x = \pi$$
 
 @[twitter](https://twitter.com/discord/status/1277935875456811008)
 
-apple music, instagram, youtube, codesandbox, (custom) embed
+@[spotify](4RZNk0OLS3SaZSDurQaxNI)
+
+@[instagram](CH0BTPODpAP)
+
+@[applemusic](https://embed.music.apple.com/hu/album/sunrise-single/1537368814)
+
+youtube, codesandbox, (custom) embed
 [^1]: Here is the footnote.
 
 [^longnote]: Here's one with multiple blocks.
